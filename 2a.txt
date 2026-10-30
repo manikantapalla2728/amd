@@ -1,0 +1,38 @@
+// Simple Types
+let myName: string = "Alice";
+let myAge: number = 30;
+let isStudent: boolean = true;
+
+console.log("Name:", myName);
+console.log("Age:", myAge);
+console.log("Is Student:", isStudent);
+
+// Special Types
+let notKnown: any = "Hello";
+notKnown = 100;
+console.log("Any type value:", notKnown);
+
+let unknownValue: unknown = "I might be anything";
+
+if (typeof unknownValue === "string") {
+    console.log("Unknown as string:", unknownValue.toUpperCase());
+}
+
+// null and undefined
+let nothingHere: null = null;
+let notAssigned: undefined = undefined;
+
+console.log("Null value:", nothingHere);
+console.log("Undefined value:", notAssigned);
+
+// void type
+function greet(): void {
+    console.log("Hello from a void function!");
+}
+greet();
+
+// never type
+function throwError(message: string): never {
+    throw new Error(message);
+}
+// throwError("Something went wrong!");
